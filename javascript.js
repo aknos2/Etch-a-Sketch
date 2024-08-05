@@ -20,7 +20,7 @@ function select() {
     document.body.insertBefore(select, container);
 
     //create and append options to select element
-    for( let v = 1; v <= selectMaxNumber; v++) {
+    for (let v = 1; v <= selectMaxNumber; v++) {
         let option = document.createElement("option");
         option.value = v;
         option.text = v;
@@ -53,7 +53,7 @@ function createSquare() {
     square.appendChild(content);
     content.classList.add("content");
 
-     //add click event listener to toggle color
+     //add click and drag event listener to toggle color
      square.addEventListener("mousedown", () => isMouseDown = true);
      square.addEventListener("mouseup", () => isMouseDown = false);
      square.addEventListener("mousemove", buttonClick);
@@ -62,7 +62,7 @@ function createSquare() {
 }
 
 function createGrid(size) {
-    for(let i = 1; i <= size; i++) {
+    for (let i = 1; i <= size; i++) {
         createSquare(i);
     }
 }
