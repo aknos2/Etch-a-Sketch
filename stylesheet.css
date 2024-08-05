@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 248, 248);
+}
+
+h1 {
+    font-size: 40px;
+    padding-left: 5px;
+}
+
+p {
+    padding-left: 7px;
+}
+
+#select {
+    align-items: center;
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    max-height: 960px;
+    margin: 0 auto;
+}
+
+.square {
+    position: relative;
+    border: 1px solid black;
+    flex-basis: 6%;
+    background-color: white;
+}
+
+.square::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.square .content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.change-color {
+    background-color: black;
+}
